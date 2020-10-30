@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+   
     <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -444,5 +444,47 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
       <audio id="wes_getinthereandfixit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/syntax_wes_getinthereandfixit.wav"></audio>
       <audio id="wes_doyousmell" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/syntax_wes_doyousmell.wav"></audio>
       <audio id="wes_shady" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/syntax_wes_shady.wav"></audio>
-</body>
+
+<script>
+    (function() {
+  
+  function keyDownHandler(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    playSound(audio, key);
+  }
+  
+  function clickHandler(e) {
+    if (this.dataset.key) {
+      const audio = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+      const key = document.querySelector(`div[data-key="${this.dataset.key}"]`);
+      playSound(audio, key);
+    } else { // no keyboard shortcut
+      const audio = document.querySelector(`audio#${this.dataset.target}`);
+      const key = document.querySelector(`div[data-target="${this.dataset.target}"]`);
+      playSound(audio, key);
+    }
+    
+  }
+  
+  function playSound(audio, key) {    
+    if (!audio) return;
+    key.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
+  }
+  
+  function removeTransition(e) {
+    e.target.classList.remove('playing');
+  }
+  
+  const keys = Array.from(document.querySelectorAll('.list__item'));
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', keyDownHandler);
+  
+  keys.forEach(key => key.addEventListener('click', clickHandler));
+  
+})();
+</script>
+    </body>
 </html>
