@@ -10,13 +10,31 @@
    <style>
      html, body{
        height: 100%;
-       background: #696969;
+       background: #4d4d4d;
+       color: white;
      }
-     .list__item {
+
+     .icon {
+       width: 40%;
+     }
+
+     .icon path {
+       fill: #3a3a3a;
+     }
+
+
+.btn-is-pushed {
+  border-radius: 50px;
+background: linear-gradient(145deg, #454545, #525252);
+box-shadow:  20px 20px 60px #414141, 
+             -20px -20px 60px #595959;
+
+}
+     .btn-normal {
       border-radius: 50px;
-background: #696969;
-box-shadow:  20px 20px 60px #595959, 
-             -20px -20px 60px #797979;
+      background: #4d4d4d;
+    box-shadow:  20px 20px 60px #414141, 
+                -20px -20px 60px#595959;
      }
    </style>
  
@@ -28,7 +46,7 @@ box-shadow:  20px 20px 60px #595959,
     <div class="wrapper h-screen wrapper ">
 
 
-        <div class="container flex flex-col h-full mx-auto	">
+        <div class="container  flex flex-col h-full mx-auto	">
           <ul class="flex p-3 justify-evenly">
             <li class="mr-6">
               <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
@@ -44,43 +62,485 @@ box-shadow:  20px 20px 60px #595959,
             </li>
           </ul>
           
-          <div class="bg-white flex-auto list m-0 p-0 w-auto grid grid-cols-3 grid-rows-3 h-full ">
+          <div class=" flex-auto list m-0 p-0 w-auto grid grid-cols-3 grid-rows-3 h-full ">
         
-            <div class="list__item flex flex-col justify-center items-center w-full h-full  " data-key="49">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3 " data-key="49">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div><div class="list__item-quote"></div>
+            </div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3 " data-key="50">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div><div class="list__item-quote"></div>
+            </div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3  " data-key="51">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div><div class="list__item-quote"></div>
+            </div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3 " data-key="52">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div> <div class="list__item-quote"></div>
+            </div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3  " data-key="53">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div><div class="list__item-quote"></div>
+            </div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3 " data-key="54">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div> <div class="list__item-quote"></div>
+            </div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3 " data-key="55">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div>
               <div class="list__item-quote"></div>
             </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full  " data-key="50">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full   " data-key="51">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full  " data-key="52">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full   " data-key="53">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full  " data-key="54">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full  " data-key="55">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center w-full h-full  " data-key="56">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">Play</div>
-              <div class="list__item-quote"></div>
+            <div class="list__item flex flex-col justify-center items-center w-full h-full p-3  " data-key="56">
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div> <div class="list__item-quote"></div>
             </div>
             <div class="list__item flex flex-col justify-center items-center p-3 " data-key="57">
-              <div class="list__item-key w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">9</div>
-              <div class="list__item-quote"></div>
+              <div class=" btn-normal w-full h-full bg-blue-600 w-full h-full flex justify-center items-center">
+                <div class="icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                 <g>
+                   <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                     C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8
+                     s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M339.557,231.32c-1.654-3.318-4.343-6.008-7.662-7.662l-136.533-68.267c-8.432-4.213-18.682-0.794-22.896,7.638
+                     c-1.185,2.371-1.801,4.986-1.8,7.637V307.2c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+                     l136.533-68.267C340.331,250.004,343.762,239.756,339.557,231.32z M204.8,279.586v-81.306l81.306,40.653L204.8,279.586z"/>
+                 </g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               <g>
+               </g>
+               </svg>
+               </div>
+              </div> <div class="list__item-quote"></div>
             </div>
             
           </div>
