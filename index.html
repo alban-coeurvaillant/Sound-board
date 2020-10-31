@@ -10,7 +10,7 @@
    <style>
      html, body{
        height: 100%;
-       background: #4d4d4d;
+       background: #49494D;
        color: white;
      }
 
@@ -19,22 +19,30 @@
      }
 
      .icon path {
-       fill: #3a3a3a;
+       fill: #ffffff;
      }
 
 
 .btn-is-pushed {
-  border-radius: 50px;
+  border-radius: 24px;
 background: linear-gradient(145deg, #454545, #525252);
 box-shadow:  20px 20px 60px #414141, 
              -20px -20px 60px #595959;
 
 }
      .btn-normal {
-      border-radius: 50px;
-      background: #4d4d4d;
+      border-radius: 24px;
+      background: #58585D;
     box-shadow:  20px 20px 60px #414141, 
                 -20px -20px 60px#595959;
+                height: 27vmin;
+    width: 27vmin;
+     }
+
+     .playing {
+    
+
+       opacity: 0.6;
      }
    </style>
  
@@ -47,21 +55,22 @@ box-shadow:  20px 20px 60px #414141,
 
 
         <div class="container  flex flex-col h-full mx-auto	">
-          <ul class="flex p-3 justify-evenly">
+
+
+      
+          <ul class="flex p-3 justify-between">
             <li class="mr-6">
               <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
             </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-            </li>
+         
+          
             <li class="mr-6">
               <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
             </li>
           </ul>
-          
+          <div class="flex justify-center p-5">
+            <h1 class="">ARABIC MAN</h1>
+          </div>
           <div class=" flex-auto list m-0 p-0 w-auto grid grid-cols-3 grid-rows-3 h-full ">
         
             <div class="list__item flex flex-col justify-center items-center w-full h-full p-3 " data-key="49">
@@ -544,20 +553,7 @@ box-shadow:  20px 20px 60px #414141,
             </div>
             
           </div>
-          <ul class="flex p-3 justify-evenly">
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
-            </li>
-          </ul>
+ 
         </div>
       </div>
       
