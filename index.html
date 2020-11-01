@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,187 +10,184 @@
     <link rel="stylesheet" type="text/css" href="css/flashblock.css" />
     <script type="text/javascript" src="script/soundmanager2.js"></script>
     <script type="text/javascript" src="script/inlineplayer.js"></script>
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CVPZXTBVC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script type="text/javascript" src="script/inlineplayer.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
-  gtag('config', 'G-6CVPZXTBVC');
-</script>
-  
-  <style>
-     html, body{
-       height: 100%;
-       background: #49494D;
-       color: white;
-     }
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CVPZXTBVC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-     .icon {
-       width: 40%;
-     }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-     .icon path {
-       fill: #ffffff;
-     }
+        gtag('config', 'G-6CVPZXTBVC');
+    </script>
 
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: #49494D;
+            color: white;
+        }
+        
+        .icon {
+            width: 40%;
+        }
+        
+        .icon path {
+            fill: #ffffff;
+        }
+        
+        .btn-is-pushed {
+            border-radius: 24px;
+            background: linear-gradient(145deg, #454545, #525252);
+            box-shadow: 20px 20px 60px #414141, -20px -20px 60px #595959;
+        }
+        
+        .btn-normal {
+            height: 27vmin;
+            width: 27vmin;
+        }
+        
+        .btn-normal a {
+            border-radius: 15pt;
+            background: #58585D;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sm2_link {
+            box-shadow: 0pt 6pt 6pt #3e3e3f;
+        }
+        
+        .sm2_link .icon path {
+            fill: #474747;
+            transition: all 0.5s;
+        }
+        
+        .sm2_playing {
+            box-shadow: none;
+        }
+        
+        .sm2_playing .icon path {
+            fill: white;
+            transition: all 0.5s;
+        }
+        
+        .playing {
+            opacity: 0.6;
+        }
+    </style>
 
-.btn-is-pushed {
-  border-radius: 24px;
-background: linear-gradient(145deg, #454545, #525252);
-box-shadow:  20px 20px 60px #414141, 
-             -20px -20px 60px #595959;
-
-}
-     .btn-normal {
-    
-              
-                height: 27vmin;
-    width: 27vmin;
-     }
-
-     .btn-normal a {
-      border-radius: 15pt;
-      background: #58585D;
-      width: 100%;
-    height: 100%;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     }
-
-     .sm2_link {
-      box-shadow:  0pt 6pt 6pt #3e3e3f;
-
-     }
-
-.sm2_link .icon path{
-  fill: #474747;
-  transition: all 0.5s;
-}
-
-
-
-
-
-     .sm2_playing {
-      box-shadow:  none;
-     }
-
-     .sm2_playing .icon path{
-      fill: white;
-      transition: all 0.5s;
-     }
-
-
-     .playing {
-    
-
-       opacity: 0.6;
-     }
-   </style>
- 
 </head>
+
 <body>
 
-<header class="bg-black flex flex-row justify-between p-4">
-  <div class="logo__brand">logo</div>
-  <div class="app__title">The soundboard</div>
-  <div class="info__btn">I</div>
-</header>
+    <header class="bg-black flex flex-row justify-between p-4 header">
+        <div class="logo__brand">logo</div>
+        <div class="app__title">The soundboard</div>
+        <div class="info__btn">I</div>
+    </header>
 
     <div class="wrapper h-screen wrapper ">
 
 
         <div class="container  flex flex-col h-full mx-auto	">
-          <div class="flex justify-center p-5">
-            <h1 class="">
+            <div class="flex justify-center p-5">
+                <h1 class="">
 
-              <a href="demos/play-mp3-links/index.html">ARABIC MAN</a>
-            </h1>
-          </div>
-          <div class=" flex flex-wrap list m-0 p-0 w-auto justify-center ">
-        
-            <div class="list__item flex flex-col justify-center items-center  p-3 " data-key="49">
-              <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
-               
-                  <a href="sounds/1.mp3" class="flex flex-col items-center justify-center">     
-                    <div class="icon"></div> 
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
-                    <span class="title"></span>
-                    <span class="action"></span>
-                    <span class="action"></span>
-                  </a>
-              </div>
+                    <a href="demos/play-mp3-links/index.html">ARABIC MAN</a>
+                </h1>
+            </div>
+            <div class=" flex flex-wrap list m-0 p-0 w-auto justify-center ">
+
+                <div class="list__item flex flex-col justify-center items-center  p-3 list-item1" data-key="49">
+                    <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
+
+                        <a href="sounds/1.mp3" class="flex flex-col items-center justify-center">
+                            <div class="icon"></div>
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
+                            <span class="title"></span>
+                            <span class="action"></span>
+                            <span class="action"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list__item flex flex-col justify-center items-center  p-3 list-item2" data-key="49">
+                    <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
+
+                        <a href="sounds/2.mp3" class="flex flex-col items-center justify-center">
+                            <span class="title"></span>
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
+
+
+
+                            <span class="action"></span>
+                            <span class="action"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list__item flex flex-col justify-center items-center  p-3 list-item3" data-key="49">
+                    <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
+
+                        <a href="sounds/3.mp3" class="flex flex-col items-center justify-center">
+                            <span class="title"></span>
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
+
+
+
+                            <span class="action"></span>
+                            <span class="action"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="list__item flex flex-col justify-center items-center  p-3 list-item4" data-key="49">
+                    <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
+
+                        <a href="sounds/4.mp3" class="flex flex-col items-center justify-center">
+                            <span class="title"></span>
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
+
+
+
+                            <span class="action"></span>
+                            <span class="action"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list__item flex flex-col justify-center items-center  p-3 list-item5" data-key="49">
+                    <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
+
+                        <a href="sounds/5.wav" class="flex flex-col items-center justify-center">
+                            <span class="title"></span>
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
+
+
+
+                            <span class="action"></span>
+                            <span class="action"></span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="list__item flex flex-col justify-center items-center  p-3 " data-key="49">
-              <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
-               
-                  <a href="sounds/2.mp3" class="flex flex-col items-center justify-center">     
-                    <span class="title"></span>
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
-                   
-                   
-                  
-                    <span class="action"></span>
-                    <span class="action"></span>
-                  </a>
-              </div>
-            </div>
-
-            <div class="list__item flex flex-col justify-center items-center  p-3 " data-key="49">
-              <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
-               
-                  <a href="sounds/3.mp3" class="flex flex-col items-center justify-center">     
-                    <span class="title"></span>
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
-                   
-                   
-                  
-                    <span class="action"></span>
-                    <span class="action"></span>
-                  </a>
-              </div>
-            </div>
-            <div class="list__item flex flex-col justify-center items-center  p-3 " data-key="49">
-              <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
-               
-                  <a href="sounds/4.mp3" class="flex flex-col items-center justify-center">     
-                    <span class="title"></span>
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
-                   
-                   
-                  
-                    <span class="action"></span>
-                    <span class="action"></span>
-                  </a>
-              </div>
-            </div>
-
-            <div class="list__item flex flex-col justify-center items-center  p-3 " data-key="49">
-              <div class=" btn-normal w-full  flex-col h-full   w-full h-full flex justify-center items-center">
-               
-                  <a href="sounds/5.wav" class="flex flex-col items-center justify-center">     
-                    <span class="title"></span>
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="52.015" height="52.036" viewBox="0 0 52.015 52.036"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-0.103 0)"><g transform="translate(0.103 0)"><g transform="translate(0 0)"><path class="a" d="M30.091.5a6.028,6.028,0,0,0-6.647,1.257q-.063.062-.121.129L11.811,15.245H8.23A8.137,8.137,0,0,0,.1,23.372v5.283A8.137,8.137,0,0,0,8.23,36.782h3.581L23.323,50.147q.058.067.121.129a6.062,6.062,0,0,0,4.251,1.76,6.2,6.2,0,0,0,2.413-.5,6,6,0,0,0,3.723-5.614,2.032,2.032,0,0,0-4.064,0,1.99,1.99,0,0,1-1.238,1.87,2.03,2.03,0,0,1-2.194-.378L14.282,33.425a2.032,2.032,0,0,0-1.539-.706H8.23a4.068,4.068,0,0,1-4.064-4.064V23.373A4.068,4.068,0,0,1,8.23,19.309h4.512a2.032,2.032,0,0,0,1.539-.706L26.336,4.61a2.053,2.053,0,0,1,3.432,1.522V35.767a2.032,2.032,0,1,0,4.064,0V6.131A6.027,6.027,0,0,0,30.091.5Z" transform="translate(-0.103 0)"/><path class="a" d="M382.766,200.748l.047-.086a11.683,11.683,0,0,0-.064-11.638,2.032,2.032,0,1,0-3.535,2,7.1,7.1,0,0,1,1.056,3.874,7.263,7.263,0,0,1-1.025,3.815l-.05.091a2.032,2.032,0,1,0,3.571,1.939Z" transform="translate(-340.445 -168.888)"/><path class="a" d="M415.4,93.139a2.032,2.032,0,1,0-2.86,2.887,18.444,18.444,0,0,1,0,26.265,2.032,2.032,0,1,0,2.86,2.887,22.508,22.508,0,0,0,0-32.039Z" transform="translate(-370.082 -83.144)"/></g></g></g></svg></span>
-                   
-                   
-                  
-                    <span class="action"></span>
-                    <span class="action"></span>
-                  </a>
-              </div>
-            </div>
-          </div>
- 
         </div>
-      </div>
-      
+    </div>
 
 
-    </body>
+
+</body>
+<script type="text/javascript" src="script/anim.js"></script>
+
 </html>
