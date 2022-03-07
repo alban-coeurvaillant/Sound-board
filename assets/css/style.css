@@ -1,0 +1,48 @@
+* {
+  border: 1px solid blue;
+}
+
+html, body {
+  height: 100%;
+  background: #49494D;
+  color: white;
+}
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.icon {
+  width: 40%;
+}
+
+.icon path {
+  fill: #ffffff;
+}
+
+#main {
+  max-width: 412px;
+  margin: auto;
+}
+
+.btn-is-pushed {
+  border-radius: 24px;
+  background: linear-gradient(145deg, #454545, #525252);
+  -webkit-box-shadow: 20px 20px 60px #414141, -20px -20px 60px #595959;
+          box-shadow: 20px 20px 60px #414141, -20px -20px 60px #595959;
+}
+
+.btn-normal {
+  border-radius: 15pt;
+  background: #58585D;
+  -webkit-box-shadow: 0pt 3pt 6pt #414141;
+          box-shadow: 0pt 3pt 6pt #414141;
+  height: 27vmin;
+  width: 27vmin;
+}
+
+.playing {
+  opacity: 0.6;
+}
