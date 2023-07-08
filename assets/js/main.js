@@ -11,12 +11,11 @@
       const audio = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
       const key = document.querySelector(`div[data-key="${this.dataset.key}"]`);
       playSound(audio, key);
-    } else { // no keyboard shortcut
+    } else { 
       const audio = document.querySelector(`audio#${this.dataset.target}`);
       const key = document.querySelector(`div[data-target="${this.dataset.target}"]`);
       playSound(audio, key);
     }
-    
   }
   
   function playSound(audio, key) {    
@@ -33,7 +32,6 @@
   const keys = Array.from(document.querySelectorAll('.list__item'));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', keyDownHandler);
-  
   keys.forEach(key => key.addEventListener('click', clickHandler));
   
 })();
