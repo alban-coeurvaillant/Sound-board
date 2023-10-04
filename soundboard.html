@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      
+        <div class="grid">
+            <div class="grid-item" onclick="playSong('song1.mp3')">1</div>
+            <div class="grid-item" onclick="playSong('song2.mp3')">2</div>
+            <div class="grid-item" onclick="playSong('song3.mp3')">3</div>
+            <div class="grid-item" onclick="playSong('song4.mp3')">4</div>
+            <div class="grid-item" onclick="playSong('song5.mp3')">5</div>
+            <div class="grid-item" onclick="playSong('song6.mp3')">6</div>
+            <div class="grid-item" onclick="playSong('song7.mp3')">7</div>
+            <div class="grid-item" onclick="playSong('song8.mp3')">8</div>
+            <div class="grid-item" onclick="playSong('song9.mp3')">9</div>
+            <script>
+                function playSong(song) {
+                    var audio = new Audio(song);
+                    audio.play();
+                }
+            </script>
+        </div>
+    </body>
+</html>
