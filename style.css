@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.grid-item button {
+  border: none !important;
+}
+
 body {
   background-color: var(--skeu-dark5);
   font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -58,6 +62,17 @@ body {
   font-size: 30px;
   text-align: center;
   box-shadow: 3px 3px 5px var(--skeu-dark4), -3px -3px 5px var(--skeu-dark4);
+}
+.grid-item button {
+  background-color: red;
+  width: 100% !important;
+  height: 100% !important;
+}
+.grid-item button:after {
+  content: "\ea17";
+  display: block;
+  font-family: "icomoon" !important;
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */

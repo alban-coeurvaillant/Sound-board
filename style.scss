@@ -27,6 +27,11 @@
     justify-content: center;
     align-items: center;
 }
+%no-border {
+    border: none !important;
+}
+
+
 @mixin padding($top, $right, $bottom, $left) {
     padding-top: $top * 1rem;
     padding-right: $right * 1rem;
@@ -41,6 +46,15 @@
     margin-left: $left * 1rem;
 }
 
+@mixin witdh($width){
+    width : $width !important;
+}
+@mixin height($height){
+    height : $height !important;
+}
+@mixin font-size($unit){
+font-size: 1em * $unit;
+}
 
 html {
 
@@ -85,6 +99,20 @@ body{
         font-size: 30px;
         text-align: center;
         box-shadow: 3px 3px 5px var(--skeu-dark4), -3px -3px 5px var(--skeu-dark4);
+    }
+    &-item{
+        button {
+            background-color: red;
+            @include witdh(100%);
+            @include height(100%);
+            @extend %no-border;
+            &:after{
+                content: "\ea17";
+                display: block;
+                font-family: 'icomoon' !important;
+                @include font-size(3);
+            }
+        }
     }
 }
 
