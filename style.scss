@@ -1,3 +1,116 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?3v55lz');
+    src:  url('fonts/icomoon.eot?3v55lz#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?3v55lz') format('truetype'),
+      url('fonts/icomoon.woff?3v55lz') format('woff'),
+      url('fonts/icomoon.svg?3v55lz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-play2:before {
+    content: "\ea15";
+  }
+  .icon-pause:before {
+    content: "\ea16";
+  }
+  .icon-stop:before {
+    content: "\ea17";
+  }
+  .icon-previous:before {
+    content: "\ea18";
+  }
+  .icon-next:before {
+    content: "\ea19";
+  }
+  .icon-backward:before {
+    content: "\ea1a";
+  }
+  .icon-forward2:before {
+    content: "\ea1b";
+  }
+  .icon-play3:before {
+    content: "\ea1c";
+  }
+  .icon-pause2:before {
+    content: "\ea1d";
+  }
+  .icon-stop2:before {
+    content: "\ea1e";
+  }
+  .icon-backward2:before {
+    content: "\ea1f";
+  }
+  .icon-forward3:before {
+    content: "\ea20";
+  }
+  .icon-first:before {
+    content: "\ea21";
+  }
+  .icon-last:before {
+    content: "\ea22";
+  }
+  .icon-previous2:before {
+    content: "\ea23";
+  }
+  .icon-next2:before {
+    content: "\ea24";
+  }
+  .icon-eject:before {
+    content: "\ea25";
+  }
+  .icon-volume-high:before {
+    content: "\ea26";
+  }
+  .icon-volume-medium:before {
+    content: "\ea27";
+  }
+  .icon-volume-low:before {
+    content: "\ea28";
+  }
+  .icon-volume-mute:before {
+    content: "\ea29";
+  }
+  .icon-volume-mute2:before {
+    content: "\ea2a";
+  }
+  .icon-volume-increase:before {
+    content: "\ea2b";
+  }
+  .icon-volume-decrease:before {
+    content: "\ea2c";
+  }
+  .icon-loop:before {
+    content: "\ea2d";
+  }
+  .icon-loop2:before {
+    content: "\ea2e";
+  }
+  .icon-infinite:before {
+    content: "\ea2f";
+  }
+  .icon-shuffle:before {
+    content: "\ea30";
+  }
+  
+
 :root {
     --main-bg-color: #f0f0f0;
     --main-text-color: #333;
@@ -11,12 +124,38 @@
     --skeu-dark5: #1c1c1c;
     --skeu-dark6: #000000;
     --skeu-light: #ffffff;
+    --radius: 50px;
+    --size: 250px;
+    --positionX: 20px;
+    --positionXOpposite: -20px;
+    --positionY: 20px;
+    --positionYOpposite: -20px;
+    --angle: 145deg;
+    --blur: 60px;
+    --textColor: #F6F5F7;
+    --textColorOpposite: #2b2b2b;
+    --baseColor: #2b2b2b;
+    --darkColor: #252525;
+    --lightColor: #313131;
+    --firstGradientColor: #2b2b2b;
+    --secondGradientColor: #2b2b2b;
+    --size: 250px;
+    --radius: 50px;
+
 
 }
 %debug {
     background-color: var(--debug-bg-color);
     color: var(--main-text-color);
     border: 1px solid var(--main-text-color);
+}
+
+
+%button {
+    border-radius: 50px;
+background: #454545;
+box-shadow:  20px 20px 60px #3b3b3b,
+             -20px -20px 60px #4f4f4f;
 }
 
 %full-height {
@@ -57,62 +196,66 @@ font-size: 1em * $unit;
 }
 
 html {
-
     @extend %full-height;
-}
-body{
-    background-color: var(--skeu-dark5);
-    font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    background-color: var(--skeu-dark5);
-    border-radius: 10px;
-    @extend %full-height;
-
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-  
-
-    &:before {
-        // content: " ";
-        // background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDEyIDEyIj4KPHBhdGggZD0iTTEuNSAxTDYuIDUuNUwxLjUgMTBWOC41TDcuNSA1LjUgTDEuNSAxWiIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
-        // background-repeat: no-repeat;
-        // background-position: center;
-        // @extend %debug;
-    }
-    &:after {
-        content: "";
-    }
-    &-item {
-        $unit : 0.5;
-        @extend %flex-align-center;
-        @include margin($unit, $unit, $unit, $unit);
-        border-radius: 10px;
-        background-color: var(--skeu-dark5);
-        color: var(--main-text-color);
-        @include padding($unit, $unit, $unit, $unit);
-        font-size: 30px;
-        text-align: center;
-        box-shadow: 3px 3px 5px var(--skeu-dark4), -3px -3px 5px var(--skeu-dark4);
-    }
-    &-item{
-        button {
-            background-color: red;
-            @include witdh(100%);
-            @include height(100%);
-            @extend %no-border;
-            &:after{
-                content: "\ea17";
-                display: block;
-                font-family: 'icomoon' !important;
-                @include font-size(3);
+    body{
+        font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        @extend %full-height;
+        margin: 0;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background-color: var(--skeu-dark5);
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            &-item {
+                border: 1px solid #676767;
+                $unit : 0.5;
+                @extend %flex-align-center;
+                @include margin($unit, $unit, $unit, $unit);
+                border-radius: 10px;
+                color: var(--main-text-color);
+                font-size: 30px;
+                text-align: center;
+                width: var(--size);
+                height: var(--size);
+            }
+            &-item{
+                align-self: center;
+                justify-self: center;
+                border-radius: var(--radius);
+                button {
+                    border-radius: var(--radius);
+                    background: linear-gradient(145deg, #2e2e2e, #272727);
+                    box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor),
+                    inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
+                                
+                    width: var(--size);
+                    height: var(--size);
+                    @extend %no-border;
+                    &:hover {
+                        box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor),
+                                    inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
+                        &::after{
+                            color: white;
+                            opacity: 1;
+                        }
+                    }
+                    &:after{
+                        content: "\ea15";
+                        display: block;
+                        font-family: 'icomoon' !important;
+                        @include font-size(6);
+                        color: #615d5d;
+                        opacity: 0.3;
+                
+                    }
+                }
             }
         }
+        
+    
     }
 }
 
