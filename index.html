@@ -4,49 +4,46 @@
         <title>Page Title</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://i.icomoon.io/public/temp/1be0585f4d/UntitledProject/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
     </head>
     <body>
-      
         <div class="grid">
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/01.mp3')"></button>
+                <button id="playBtn"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn2"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn3"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/03.mp3')"></button>
+                <button id="playBtn4"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn5""></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn6"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn7"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn8"></button>
             </div>
             <div class="grid-item">
-                <button onclick="playSong('../Sound-board/sounds/02.mp3')"></button>
+                <button id="playBtn9"></button>
             </div>
-            <script>
-                function playSong(song) {
-                    var audio = new Audio(song);
-           
-                }
-                var buttons = document.querySelectorAll('.grid-item button');
-                buttons.forEach(function(button) {
-                    button.addEventListener('click', function() {
-                        playSong(this.getAttribute('onclick').split("'")[1]);
-                    });
-                });
-            </script>
         </div>
     </body>
+    <script>
+    let playBtn = document.getElementById("playBtn");
+    var sound1 = new Howl({
+      src: ['sounds/01.mp3']
+    });
+    playBtn.addEventListener('click', function(){
+        sound1.play();
+    })
+    </script>
 </html>
