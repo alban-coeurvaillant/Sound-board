@@ -170,6 +170,9 @@ box-shadow:  20px 20px 60px #3b3b3b,
     border: none !important;
 }
 
+%has-transition {
+    transition: all 100ms;
+}
 
 @mixin padding($top, $right, $bottom, $left) {
     padding-top: $top * 1rem;
@@ -230,15 +233,24 @@ html {
                     background: linear-gradient(145deg, #2e2e2e, #272727);
                     box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor),
                     inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
-                                
                     width: var(--size);
                     height: var(--size);
                     @extend %no-border;
+                    &.is-playing {
+                        outline: solid 2px var(--textColor);
+                        &::after{
+                            color: var(--skeu-background);
+                            opacity: 1;
+                            @extend %has-transition;
+                        }
+                        @extend %has-transition;
+                    }
                     &:hover {
+                        cursor: pointer;
                         box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor),
                                     inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
                         &::after{
-                            color: white;
+                        //    color: white;
                             opacity: 1;
                         }
                     }
@@ -251,6 +263,7 @@ html {
                         opacity: 0.3;
                 
                     }
+                    @extend %has-transition;
                 }
             }
         }

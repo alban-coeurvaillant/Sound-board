@@ -144,6 +144,9 @@ html body .grid-item {
 html body .grid-item button {
   border: none !important; }
 
+html body .grid-item button.is-playing::after, html body .grid-item button.is-playing, html body .grid-item button {
+  transition: all 100ms; }
+
 html body {
   font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0; }
@@ -177,10 +180,15 @@ html body {
         box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor), inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
         width: var(--size);
         height: var(--size); }
+        html body .grid-item button.is-playing {
+          outline: solid 2px var(--textColor); }
+          html body .grid-item button.is-playing::after {
+            color: var(--skeu-background);
+            opacity: 1; }
         html body .grid-item button:hover {
+          cursor: pointer;
           box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor), inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor); }
           html body .grid-item button:hover::after {
-            color: white;
             opacity: 1; }
         html body .grid-item button:after {
           content: "\ea15";
