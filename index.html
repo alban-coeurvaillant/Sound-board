@@ -39,11 +39,33 @@
     </body>
     <script>
     let playBtn = document.getElementById("playBtn");
+    
+    function isPlaying(){
+        //si le son est déclenché
+        if(sound1.playing()){
+            console.log('audio is currently playing...');
+            setTimeout(isPlaying, 1000); //adjust timeout to fit your needs
+            playBtn.classList.add("is-playing");
+        }
+        else{
+            console.log('stopped');  
+            playBtn.classList.remove("is-playing");
+        }
+    }
+
+
     var sound1 = new Howl({
-      src: ['sounds/01.mp3']
+      src: ['sounds/01.mp3'],
+      html5: true,
+    onplay: isPlaying
     });
     playBtn.addEventListener('click', function(){
         sound1.play();
     })
+
+
+
+
+
     </script>
 </html>
