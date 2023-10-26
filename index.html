@@ -59,40 +59,67 @@
     </body>
 
     <script>
-    let playBtn = document.getElementById("playBtn");
-    let playBtn2 = document.getElementById("playBtn2");
-    let playBtn3 = document.getElementById("playBtn3");
+    // let playBtn = document.getElementById("playBtn");
+    // let playBtn2 = document.getElementById("playBtn2");
+    // let playBtn3 = document.getElementById("playBtn3");
+    // let playBtn4 = document.getElementById("playBtn4");
+
     let playBtns = document.querySelectorAll("button");
     console.log(playBtns[2]);
 
-    var sound1 = new Howl({
-      src: ['sounds/alerte-au-gogole.mp3'],
-      html5: true,
-    onplay: isPlaying
-    });
-
-    var sound2 = new Howl({
-      src: ['sounds/c-nul-homer.mp3'],
-      html5: true,
-    onplay: isPlaying
-    });
-
-    var sound3 = new Howl({
-      src: ['sounds/cest-qui-le-patron.mp3'],
-      html5: true,
-    onplay: isPlaying
-    });
+    // Liste des buttons 
 
     playBtns[0].addEventListener('click', function(){
         sound1.play();
     })
-
     playBtns[1].addEventListener('click', function(){
         sound2.play();
     })
     playBtns[2].addEventListener('click', function(){
         sound3.play();
     })
+    playBtns[3].addEventListener('click', function(){
+        sound4.play();
+    })
+    playBtns[4].addEventListener('click', function(){
+        sound5.play();
+    })
+
+
+    // liste des sons
+
+    var sound1 = new Howl({
+        src: ['sounds/alerte-au-gogole.mp3'],
+        html5: true,
+        onplay: isPlaying
+    });
+
+    var sound2 = new Howl({
+        src: ['sounds/c-nul-homer.mp3'],
+        html5: true,
+        onplay: isPlaying
+    });
+
+    var sound3 = new Howl({
+        src: ['sounds/cest-qui-le-patron.mp3'],
+        html5: true,
+        onplay: isPlaying
+    });
+
+    var sound4 = new Howl({
+        src: ['sounds/la-femme-nest-pas-a-la-cuisine.mp3'],
+        html5: true,
+        onplay: isPlaying
+    });
+
+    var sound5 = new Howl({
+        src: ['sounds/la-place-de-la-femme-cest-a-la-cuisine.mp3'],
+        html5: true,
+        onplay: isPlaying
+    });
+
+
+
     function isPlaying(){
         //si le son est déclenché
         if(sound1.playing()){
