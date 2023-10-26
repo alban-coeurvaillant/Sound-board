@@ -147,55 +147,66 @@ html body .grid-item button {
 html body .grid-item button.is-playing::after, html body .grid-item button.is-playing, html body .grid-item button {
   transition: all 100ms; }
 
-html body {
-  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 0; }
-  html body .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    background-color: var(--skeu-dark5); }
-    @media (min-width: 768px) {
-      html body .grid {
-        grid-template-columns: repeat(3, 1fr); } }
-    html body .grid-item {
-      border: 1px solid #676767;
-      margin-top: 0.5rem;
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-      margin-left: 0.5rem;
-      border-radius: 10px;
-      color: var(--main-text-color);
-      font-size: 30px;
-      text-align: center;
-      width: var(--size);
-      height: var(--size); }
-    html body .grid-item {
-      align-self: center;
-      justify-self: center;
-      border-radius: var(--radius); }
-      html body .grid-item button {
-        border-radius: var(--radius);
-        background: linear-gradient(145deg, #2e2e2e, #272727);
-        box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor), inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
-        width: var(--size);
-        height: var(--size); }
-        html body .grid-item button.is-playing {
-          outline: solid 2px var(--textColor); }
-          html body .grid-item button.is-playing::after {
-            color: var(--skeu-background);
-            opacity: 1; }
-        html body .grid-item button:hover {
-          cursor: pointer;
-          box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor), inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor); }
-          html body .grid-item button:hover::after {
-            opacity: 1; }
-        html body .grid-item button:after {
-          content: "\ea15";
-          display: block;
-          font-family: 'icomoon' !important;
-          font-size: 6em;
-          color: #615d5d;
-          opacity: 0.3; }
+section#main-buttons {
+  margin-top: 3em; }
+
+html {
+  background-color: var(--skeu-dark5);
+  color: var(--main-bg-color);
+  text-align: center; }
+  html body {
+    font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0; }
+    html body #main form select {
+      width: 100%;
+      padding: 1em;
+      max-width: 72vh; }
+    html body .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px; }
+      @media (min-width: 36em) {
+        html body .grid {
+          grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 65em) {
+        html body .grid {
+          grid-template-columns: repeat(3, 1fr); } }
+      html body .grid-item {
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        border-radius: 10px;
+        color: var(--main-text-color);
+        font-size: 30px;
+        text-align: center;
+        width: 100%; }
+      html body .grid-item {
+        align-self: center;
+        justify-self: center;
+        border-radius: var(--radius); }
+        html body .grid-item button {
+          border-radius: var(--radius);
+          background: linear-gradient(145deg, #2e2e2e, #272727);
+          box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor), inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor);
+          padding: 1em 0;
+          width: 95%; }
+          html body .grid-item button.is-playing {
+            outline: solid 2px var(--textColor); }
+            html body .grid-item button.is-playing::after {
+              color: var(--skeu-background);
+              opacity: 1; }
+          html body .grid-item button:hover {
+            cursor: pointer;
+            box-shadow: inset var(--positionX) var(--positionY) var(--blur) var(--darkColor), inset var(--positionXOpposite) var(--positionYOpposite) var(--blur) var(--lightColor); }
+            html body .grid-item button:hover::after {
+              opacity: 1; }
+          html body .grid-item button:after {
+            content: "\ea15";
+            display: block;
+            font-family: 'icomoon' !important;
+            font-size: 6em;
+            color: #615d5d;
+            opacity: 0.3; }
 
 /*# sourceMappingURL=style.css.map */
