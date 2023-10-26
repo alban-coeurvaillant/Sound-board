@@ -13,20 +13,14 @@
                 <nav></nav>
             </header>
             <main id="main">
-                <section>
+                <section id="search-zone">
                     <form action="">
-                        <select name="pets" id="pet-select">
+                        <select name="themes" id="theme-select">
                             <option value="">--Please choose an option--</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
                         </select>
                     </form> 
                 </section>
-                <section>
+                <section id="main-buttons">
                     <div class="grid">
                         <div class="grid-item">
                             <button id="playBtn"></button>
@@ -70,6 +64,7 @@
     let playBtn3 = document.getElementById("playBtn3");
     let playBtns = document.querySelectorAll("button");
     console.log(playBtns[2]);
+
     var sound1 = new Howl({
       src: ['sounds/alerte-au-gogole.mp3'],
       html5: true,
